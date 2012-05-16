@@ -1,0 +1,28 @@
+<h1>New</h1>
+
+<%= form_for @emp , :url=>{:action=>'create'} do |emp| %>
+     <p>
+       <b>Name:</b>
+       <%= emp.text_field :name %>
+
+     </p>
+
+    <p>
+      <b>Age:</b>
+      <%= emp.text_field :age%>
+    </p>
+
+    <p>
+      <b>Address:</b>
+      <%= emp.text_field :address%>
+    </p>
+    <p>
+      <b>Address:</b>
+      <%= emp.text_field :address%>
+    </p>
+
+    <%= emp.submit%>
+
+<%end%>
+
+<%= link_to 'back', emp_index_path %>

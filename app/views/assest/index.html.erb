@@ -1,0 +1,40 @@
+<h1>Index</h1>
+
+
+<table border=1>
+  <tr>
+    <th>Assest_id</th>
+    <th>Assest_no</th>
+    <th>Assest_type</th>
+    <th>Issue_date</th>
+    <th>Emp_id</th>
+    <th>Emp_name</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <% @asts.each do |ast| %>
+      <tr>
+        <td><%= ast.id %></td>
+        <td><%= ast.assest_no %></td>
+        <td><%= ast.assest_type %></td>
+        <td><%= ast.issue_date %></td>
+        <td><%= ast.emp_id %></td>
+        <td><%= ast.emp.name %></td>
+        <td><%=link_to 'Show' ,:controller=>'assest',:action=>'show',:id=>ast.id  %></td>
+        <td><%=link_to 'Edit', :controller=>'assest',:action=>'edit',:id=>ast.id %></td>
+        <td><%=link_to 'Destroy',:controller=>'assest',:action=>'delete',:id=>ast.id %></td>
+
+
+
+  <%end %>
+</table>
+
+
+
+
+<%=link_to 'add assest', :controller=>'assest',:action=>'new',:id=>@emp.id %>
+  <br/>
+
+
+<%=link_to 'Emp', emp_index_path %>

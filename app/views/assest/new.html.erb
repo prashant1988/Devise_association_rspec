@@ -1,0 +1,28 @@
+<h1>New</h1>
+
+
+
+<%= form_for (@ast) ,:url=>{:action=>'create', :id=>@emp.id},:html=>{:multipart=>true} do |ast|%>
+
+    <p>
+      <b>Assest_no</b>
+    <%= ast.text_field :assest_no%>
+    </p>
+    <p>
+      <b>Assest_type</b>
+      <%= ast.text_field :assest_type%>
+    </p>
+    <p>
+      <b>Issue_date</b>
+      <%= ast.text_field :issue_date%>
+    </p>
+    <p>
+
+      <%= ast.hidden_field :emp_id%>
+    </p>
+
+
+    <%= ast.submit%>
+
+<%end%>
+

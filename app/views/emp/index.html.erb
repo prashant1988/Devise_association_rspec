@@ -1,0 +1,37 @@
+<center>
+<h1>Index</h1>
+
+
+<table border=1>
+ <tr>
+   <th>Emp id</th>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Address</th>
+   <th>Assests</th>
+
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+  <% @emp.each do |emp| %>
+    <tr>
+      <td><%= emp.id %></td>
+      <td><%= emp.name %></td>
+      <td><%= emp.age %></td>
+      <td><%= emp.address %></td>
+      <td><%= emp.assests.size %></td>
+      <td><%=link_to 'Show' , emp %></td>
+      <td><%=link_to 'Edit', edit_emp_path(emp) %></td>
+      <td><%=link_to 'Destroy',emp, :confirm=>'Are you sure?',method: :delete %></td>
+      <td><%=link_to 'Asset_Check', :controller=>'assest',:action=>'index',:id=>emp.id %></td>
+
+      <td><%= link_to 'Emp_check',emp_check_path(:id => emp.id) %></td>
+
+  
+  
+  <%end %>
+ </table>
+
+<%=link_to 'New', new_emp_path %>
+      </center>

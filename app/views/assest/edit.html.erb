@@ -1,0 +1,20 @@
+<h1>Edit</h1>
+
+<%= form_for (@ast),:url=>{:action=>'update',:id=>@ast.id}  do |ast|%>
+
+    <p>
+      <b>Assest_no</b>
+      <%= ast.text_field(:assest_no)%>
+    </p>
+    <p>
+      <b>Assest_type</b>
+      <%= ast.text_field(:assest_type)%>
+    </p>
+    <p>
+      <b>Issue_date</b>
+      <%= ast.text_field(:issue_date)%>
+    </p>
+
+    <%= ast.submit%>
+
+<%end%>

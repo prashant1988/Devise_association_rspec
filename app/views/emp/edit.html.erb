@@ -1,0 +1,24 @@
+<h1>Edit</h1>
+
+
+<%= form_for @emp  do |emp| %>
+    <p>
+      <b>Name:</b>
+      <%= emp.text_field :name %>
+    </p>
+
+    <p>
+      <b>Age:</b>
+      <%= emp.text_field :age%>
+    </p>
+
+    <p>
+      <b>Address:</b>
+      <%= emp.text_field :address%>
+    </p>
+
+    <%= emp.submit%>
+
+<%end%>
+
+<%= link_to 'back', emp_index_path %>

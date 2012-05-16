@@ -1,0 +1,18 @@
+<h1>hello</h1>
+
+ <table border="1">
+  <tr> <th>Assest number</th>
+       <th>Assest type</th>
+       <th>Issue_date</th>
+   </tr>
+   
+      
+<% @ast.each do |ast|%>
+<tr>
+     <td><%= ast.assest_no%><br/></td>
+    <td><%= ast.assest_type%><br/></td>
+    <td><%= ast.issue_date%><br/></td>
+</tr>
+<%end%>
+   
+ </table>
